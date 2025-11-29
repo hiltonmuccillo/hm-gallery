@@ -174,7 +174,7 @@
         var duration = this.settings.animationDuration || 400;
 
         if (options.instant || !this._initialized || transition === 'none') {
-            this.$mainImg.stop(true, true).css({ opacity: 1, marginLeft: 0 });
+            this.$mainImg.stop(true, true).css({ opacity: 1 });
             this.$mainImg.attr({
                 src: item.src,
                 alt: item.alt
@@ -188,7 +188,7 @@
         var direction = (newIndex > prevIndex) ? 1 : -1;
 
         if (transition === 'fade') {
-            this.$mainImg.css({ opacity: 0, marginLeft: 0 });
+            this.$mainImg.css({ opacity: 0 });
             this.$mainImg.attr({
                 src: item.src,
                 alt: item.alt

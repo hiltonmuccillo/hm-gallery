@@ -25,12 +25,16 @@
     background: #000;
     border-radius: 6px;
     overflow: hidden;
+    /* keep a reasonable height even in small viewports (e.g. CodePen result) */
+    min-height: clamp(220px, 40vh, 480px);
 }
 
 .hm-gallery-main img {
-    max-width: 100%;
-    max-height: 100vh;
     display: block;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
     margin: 0 auto;
 }
 
