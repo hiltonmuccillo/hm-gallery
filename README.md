@@ -19,17 +19,17 @@ https://codepen.io/hiltonmuccillo/pen/NPNzPdm
 ### Using CDN (jsDelivr)
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hiltonmuccillo/hm-gallery@main/dist/hmGallery.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hiltonmuccillo/hm-gallery@v1.0.2/dist/hmGallery.css">
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/hiltonmuccillo/hm-gallery@main/dist/jquery.hmGallery.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/hiltonmuccillo/hm-gallery@v1.0.2/dist/jquery.hmGallery.js"></script>
 ```
 
 ### Minified versions
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hiltonmuccillo/hm-gallery@main/dist/hmGallery.min.css">
-<script src="https://cdn.jsdelivr.net/gh/hiltonmuccillo/hm-gallery@main/dist/jquery.hmGallery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hiltonmuccillo/hm-gallery@v1.0.2/dist/hmGallery.min.css">
+<script src="https://cdn.jsdelivr.net/gh/hiltonmuccillo/hm-gallery@v1.0.2/dist/jquery.hmGallery.min.js"></script>
 ```
 
 ---
