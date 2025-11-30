@@ -149,7 +149,7 @@ Released under the MIT License.
 
 **Hilton Muccillo**  
 Front-end Developer & Web Designer  
-<a href="https://hiltonmuccillo.com" target="_blank" rel="noopener noreferrer">hiltonmuccillo.com</a>
+[hiltonmuccillo.com](https://hiltonmuccillo.com){:target="_blank"}
 
 ---
 
