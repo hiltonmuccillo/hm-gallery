@@ -357,9 +357,24 @@
             el.mozRequestFullScreen ||
             el.msRequestFullscreen;
 
-        if (req) {
-            req.call(el);
-        } else {
+        if (!req) {
+            this.setFullscreenClass(true);
+            return;
+        }
+
+        var self = this;
+
+        try {
+            var result = req.call(el);
+
+            if (result && typeof result.catch === 'function') {
+                result.catch(function (err) {
+                    console.warn('Fullscreen request failed, falling back to CSS-only fullscreen', err);
+                    self.setFullscreenClass(true);
+                });
+            }
+        } catch (err) {
+            console.warn('Fullscreen request threw error, falling back to CSS-only fullscreen', err);
             this.setFullscreenClass(true);
         }
     };
@@ -370,9 +385,24 @@
             document.mozCancelFullScreen ||
             document.msExitFullscreen;
 
-        if (exit && this._getFullscreenElement()) {
-            exit.call(document);
-        } else {
+        if (!exit || !this._getFullscreenElement()) {
+            this.setFullscreenClass(false);
+            return;
+        }
+
+        var self = this;
+
+        try {
+            var result = exit.call(document);
+
+            if (result && typeof result.catch === 'function') {
+                result.catch(function (err) {
+                    console.warn('Exit fullscreen failed, falling back to CSS-only fullscreen', err);
+                    self.setFullscreenClass(false);
+                });
+            }
+        } catch (err) {
+            console.warn('Exit fullscreen threw error, falling back to CSS-only fullscreen', err);
             this.setFullscreenClass(false);
         }
     };
